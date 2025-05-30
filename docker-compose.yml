@@ -6,5 +6,8 @@ services:
     container_name: wig_stick
     ports:
       - "5000:5000"
+    devices:
+      - "/dev/video0:/dev/video0"  # Give container access to webcam
+    privileged: true
     volumes:
       - ./wig_stick:/app
