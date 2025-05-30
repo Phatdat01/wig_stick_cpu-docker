@@ -1,6 +1,15 @@
 FROM python:3.10-slim
 
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    git \
+    cmake \
+    g++ \
+    make \
+    libopenblas-dev \
+    liblapack-dev \
+    libx11-dev \
+    python3-dev \
+ && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
