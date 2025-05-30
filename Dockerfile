@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     libopenblas-dev \
     liblapack-dev \
     libx11-dev \
+    libgl1 \
     python3-dev \
  && rm -rf /var/lib/apt/lists/*
 
